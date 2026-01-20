@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="./image/login.png" />
+    <title>Login</title>
+    <link rel="stylesheet" href="./style/login.css" />
+  </head>
+  <body>
+    <div class="background">
+      <div class="login-card">
+        <h3 class="logo">Your logo</h3>
+        <h2>Login</h2>
+
+        <form id="loginForm">
+          <label>Email</label>
+          <input
+            id="emailInput"
+            type="email"
+            placeholder="username@gmail.com"
+          />
+
+          <label>Password</label>
+          <input id="passwordInput" type="password" placeholder="Password" />
+
+          <a href="#" class="forgot">Forgot Password?</a>
+
+          <button type="submit">Sign in</button>
+
+          <p class="or">or continue with</p>
+
+          <p class="register">
+            Don't have an account yet?
+            <a href="#">Register for free</a>
+          </p>
+        </form>
+
+        <div class="habar"></div>
+      </div>
+    </div>
+    <script src="./js/common.js" defer></script>
+    <script>
+      const form = document.getElementById("loginForm");
+      const emailInput = document.getElementById("emailInput");
+      const passInput = document.getElementById("passwordInput");
+      const habar = document.querySelector(".habar");
+
+      function showHabar(text, isError = false) {
+        if (!habar) return;
+
+        habar.textContent = text;
+        habar.classList.add("show");
+        habar.classList.toggle("error", isError);
+
+        setTimeout(() => {
+          habar.classList.remove("show");
+        }, 2000);
+      }
+
+      form?.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const email = emailInput.value.trim();
+        const password = passInput.value.trim();
+
+        if (!email || !password) {
+          showHabar("Email va parolni to'liq kiriting!", true);
+          return;
+        }
+
+        console.log("Email:", email);
+        console.log("Password:", password);
+
+        showHabar("Login muvaffaqiyatli ✅");
+
+        setTimeout(() => {
+          window.location.href = "index.html";
+        }, 2000);
+      });
+    </script>
+  </body>
+</html>

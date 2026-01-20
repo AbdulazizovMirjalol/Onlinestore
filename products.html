@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Web Logo image -->
+    <link rel="icon" type="image/png" href=".//image/logo-basket.png" />
+
+    <!-- Web tittle -->
+    <title>Products</title>
+
+    <!-- CSS Section -->
+    <link rel="stylesheet" href="./style/products.css" />
+
+    <!-- Library -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- TOP INFO BAR -->
+    <div class="top-bar">
+      <div class="top-text">
+        <p class="time">Mon-Thu: 9:00 AM - 5:30 PM</p>
+        <p class="address">
+          Visit our showroom in 1234 Street Address City Address, 1234
+          <a href="./contact.html">Contact Us</a>
+        </p>
+        <div class="top-nav-icon">
+          <p class="call">Call Us: (77) 777 17 17</p>
+          <a
+            href="https://www.facebook.com/profile.php?id=61582435425435"
+            target="_blank"
+            ><i class="fa-brands fa-square-facebook"></i
+          ></a>
+          <a href="https://www.instagram.com/abdulazizov7851/" target="_blank">
+            <i class="fa-brands fa-instagram"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- HEADER -->
+    <div class="qqqq">
+      <header class="navbar">
+        <div class="navbar-section">
+          <div class="logo">
+            <img src="./image/image-Photoroom.png" alt="" />
+          </div>
+          <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="products.html" class="active">Products</a>
+            <a href="location.html">Location</a>
+            <a href="contact.html">Contacts</a>
+          </nav>
+
+          <div class="icons">
+            <div class="search">
+              <input type="text" placeholder="Search..." />
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+
+            <a href="./cart.html" class="cart-link">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+            <a href="./login.html"><i class="fa-solid fa-circle-user"></i></a>
+            <i class="fa-solid fa-bars"></i>
+
+            <!-- KATALOG -->
+            <div class="catalog">
+              <a href="products.html?category=phones">Phones</a>
+              <a href="products.html?category=laptops">Laptops</a>
+              <a href="products.html?category=smartwatches">Smart Watches</a>
+              <a href="products.html?category=accessories">Accessories</a>
+              <a href="products.html?category=sale">Sale</a>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <!-- PRODUCT -->
+    <section class="shop-page">
+      <!-- breadcrumb -->
+      <div class="shop-top">
+        <span
+          ><a href="./index.html">Home</a> /
+          <span style="color: black">Shop</span></span
+        >
+        <h4><a href="#" class="view-all">View All</a></h4>
+      </div>
+
+      <div class="shop-layout">
+        <!-- LEFT FILTER -->
+        <div class="salom">
+          <aside class="shop-filter">
+            <h3>Sort Your Search<br />to Match Your Needs</h3>
+
+            <!-- Categories -->
+            <div class="filter-box">
+              <h4>Categories</h4>
+              <ul>
+                <li>All</li>
+                <li>laptop</li>
+                <li>pc</li>
+                <li>mobile</li>
+                <li>smart watch</li>
+                <li class="more">Show more</li>
+              </ul>
+            </div>
+
+            <!-- Price -->
+            <div class="filter-box">
+              <h4>Price</h4>
+              <div class="price-range">
+                <span>$100</span>
+                <strong>$500</strong>
+                <span>$2000</span>
+              </div>
+              <input type="range" min="100" max="2000" value="500" />
+            </div>
+
+            <!-- Rating -->
+            <div class="filter-boxx">
+              <h4 class="h4h4">Customer Rating</h4>
+              <label><input type="checkbox" /> 4 ★ & above</label><br />
+              <label><input type="checkbox" /> 3 ★ & above</label>
+            </div>
+          </aside>
+
+          <p class="results">Showing 1-14 of 1000 results</p>
+        </div>
+
+        <!-- PRODUCTS -->
+        <div class="shop-products">
+          <div class="product-grid">
+            <!-- CARD -->
+            <div
+              class="product-card"
+              data-id="1"
+              data-title="Google Buds 2"
+              data-price="960"
+              data-old-price="1160"
+              data-img="./image/m1.png"
+            >
+              <span class="heart">♡</span>
+              <img src="./image/m1.png" />
+              <h4>Google Buds 2</h4>
+              <div class="price">
+                <span class="new">$960</span>
+                <span class="old">$1160</span>
+              </div>
+              <div class="rating">☆☆☆☆☆ <span>Reviews (4)</span></div>
+            </div>
+
+            <div
+              class="product-card"
+              data-id="2"
+              data-title="Apple Mac book Air"
+              data-price="960"
+              data-old-price="1160"
+              data-img="./image/m2.png"
+            >
+              <span class="heart">♡</span>
+              <img src="./image/m2.png" />
+              <h4>Apple Mac book Air</h4>
+              <div class="price">
+                <span class="new">$960</span>
+                <span class="old">$1160</span>
+              </div>
+              <div class="rating">☆☆☆☆☆ <span>Reviews (4)</span></div>
+            </div>
+
+            <div
+              class="product-card"
+              data-id="3"
+              data-title="Google Pixel 8"
+              data-price="960"
+              data-old-price="1160"
+              data-img="./image/m3.png"
+            >
+              <span class="heart">♡</span>
+              <img src="./image/m3.png" />
+              <h4>Google Pixel 8</h4>
+              <div class="price">
+                <span class="new">$960</span>
+                <span class="old">$1160</span>
+              </div>
+              <div class="rating">☆☆☆☆☆ <span>Reviews (4)</span></div>
+            </div>
+
+            <div
+              class="product-card"
+              data-id="4"
+              data-title="Google Pixel 8"
+              data-price="960"
+              data-old-price="1160"
+              data-img="./image/m1.png"
+            >
+              <span class="heart">♡</span>
+              <img src="./image/m2.png" />
+              <h4>Google Pixel 8</h4>
+              <div class="price">
+                <span class="new">$960</span>
+                <span class="old">$1160</span>
+              </div>
+              <div class="rating">☆☆☆☆☆ <span>Reviews (4)</span></div>
+            </div>
+
+            <div
+              class="product-card"
+              data-id="5"
+              data-title="Google Pixel 8"
+              data-price="960"
+              data-old-price="1160"
+              data-img="./image/m3.png"
+            >
+              <span class="heart">♡</span>
+              <img src="./image/m3.png" />
+              <h4>Google Pixel 8</h4>
+              <div class="price">
+                <span class="new">$960</span>
+                <span class="old">$1160</span>
+              </div>
+              <div class="rating">☆☆☆☆☆ <span>Reviews (4)</span></div>
+            </div>
+
+            <div
+              class="product-card"
+              data-id="6"
+              data-title="Google Pixel 8"
+              data-price="960"
+              data-old-price="1160"
+              data-img="./image/m1.png"
+            >
+              <span class="heart">♡</span>
+              <img src="./image/m1.png" />
+              <h4>Google Pixel 8</h4>
+              <div class="price">
+                <span class="new">$960</span>
+                <span class="old">$1160</span>
+              </div>
+              <div class="rating">☆☆☆☆☆ <span>Reviews (4)</span></div>
+            </div>
+
+            <!-- yana ko‘paytirasan -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fotter -->
+    <footer class="footer">
+      <!-- NEWSLETTER -->
+      <div class="footer-top">
+        <div class="newsletter">
+          <h2>Sign Up To Our Newsletter.</h2>
+          <p>Be the first to hear about the latest offers.</p>
+        </div>
+
+        <form class="newsletter-form">
+          <input type="email" placeholder="Your Email" />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+
+      <!-- LINKS -->
+      <div class="footer-content">
+        <div class="footer-col">
+          <h4>Information</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">About Zip</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Search</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Orders and Returns</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Advanced Search</a></li>
+            <li><a href="#">Newsletter Subscription</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li>III Bijoy sarani, Dhaka,<br />DH 1515, Bangladesh.</li>
+            <li>exclusive@gmail.com</li>
+            <li>Orders and Returns</li>
+            <li>+88015-88888-9999</li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Account</h4>
+          <ul>
+            <li><a href="#">My Account</a></li>
+            <li><a href="#">Login / Register</a></li>
+            <li><a href="#">Cart</a></li>
+            <li><a href="#">Wishlist</a></li>
+            <li><a href="#">Shop</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Address</h4>
+          <p>
+            Address: 1234 Street Address City Address, 1234<br />
+            Phones: (00) 1234 5678<br /><br />
+            We are open: Monday-Thursday: 9:00 AM - 5:30 PM<br />
+            Friday: 9:00 AM - 6:00 PM<br />
+            Saturday: 11:00 AM - 5:00 PM<br />
+            E-mail: shop@email.com
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Download App</h4>
+          <p>Save $3 with App New User Only</p>
+
+          <div class="app-download">
+            <img src="./image/QR.png" alt="" />
+          </div>
+
+          <div class="socials">
+            <a
+              href="https://www.facebook.com/profile.php?id=61582435425435"
+              target="_blank"
+              ><i class="fa-brands fa-facebook-f"></i
+            ></a>
+            <a href="https://x.com/" target="_blank"
+              ><i class="fa-brands fa-twitter"></i
+            ></a>
+            <a href="https://www.instagram.com/" target="_blank"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="https://x.com/" target="_blank"
+              ><i class="fa-brands fa-x-twitter"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- BOTTOM -->
+      <div class="footer-bottom">
+        <div class="botton-footer -icon">
+          <i class="fa-brands fa-square-facebook"></i>
+          <i class="fa-brands fa-square-instagram"></i>
+          <i class="fa-brands fa-square-twitter"></i>
+        </div>
+        <div class="payment">
+          <img src="./image/pay 1.png" />
+          <img src="./image/pay 2.png" />
+          <img src="./image/pay 3.png" />
+          <img src="./image/pay 4.png" />
+          <img src="./image/pay 5.png" />
+        </div>
+
+        <p>Copyright © 2020 Shop Pty. Ltd.</p>
+      </div>
+    </footer>
+    <script src="./js/product-open.js" defer></script>
+    <script src="./js/common.js" defer></script>
+  </body>
+</html>
