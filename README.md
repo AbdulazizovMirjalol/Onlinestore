@@ -1,0 +1,1 @@
+bu gitdan qushildi 
