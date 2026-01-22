@@ -6,3 +6,6 @@ document.addEventListener("click", (e) => {
   if (bars) catalog.classList.toggle("open");
   else if (!catalog.contains(e.target)) catalog.classList.remove("open");
 });
+
+
+

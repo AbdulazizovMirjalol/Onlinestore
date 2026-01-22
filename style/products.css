@@ -248,6 +248,11 @@ body {
   height: 622px;
   background: #fff;
   padding: 25px;
+  position: sticky;
+  top: 20px; /* navbar baland bo‘lsa 70-90px qiling */
+  align-self: flex-start;
+  max-height: calc(100vh - 40px);
+  overflow: auto;
 }
 
 .shop-filter h3 {
@@ -256,38 +261,115 @@ body {
   border-bottom: 1px solid #e5e7eb;
 }
 
-.filter-box {
-  margin-bottom: 25px;
-  flex-direction: column;
+/* FILTER BOX LOOK (modal ichidagi blokga o'xshatamiz) */
+.filter-box{
+  background: #fff;
+  border-radius: 12px;
+  padding: 18px 18px 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+  max-width: 420px;
 }
 
-.filter-box h4 {
-  margin-bottom: 10px;
+/* Title */
+.filter-box h4{
+  margin: 0 0 10px;
   font-size: 14px;
+  font-weight: 700;
+  color: #111827;
 }
 
-.filter-box .h4h4 {
-  border-top: 2px solid #e5e7eb;
+/* $100  $500  $2000 */
+.price-range{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  color: #6b7280;
+  font-size: 13px;
 }
 
-.filter-box ul {
-  list-style: none;
+.price-range strong{
+  color: #111827;
+  font-weight: 700;
+  font-size: 13px;
 }
 
-.filter-box ul li {
-  font-size: 14px;
-  margin-bottom: 8px;
+/* RANGE */
+.filter-box input[type="range"]{
+  /* responsive width */
+  width: 100%;
+  max-width: 350px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  /* vars */
+  --track-h: 3px;         /* chiziq qalinligi */
+  --thumb: 16px;          /* dumaloq kattaligi */
+  --track: #d1d5db;       /* kulrang */
+  --fill: #111827;        /* qora (rasmdagidek) */
+  --percent: 0%;          /* Chrome/Safari fill uchun (ixtiyoriy JS bilan yangilanadi) */
+
+  appearance: none;
+  -webkit-appearance: none;
+  height: var(--track-h);
+  border-radius: 999px;
+  background:
+    linear-gradient(var(--fill), var(--fill)) 0/var(--percent) 100% no-repeat,
+    var(--track);
+  outline: none;
   cursor: pointer;
 }
 
-.filter-box .more {
-  color: #2563eb;
-  border-bottom: 1px solid #e5e7eb;
+/* Chrome/Safari track */
+.filter-box input[type="range"]::-webkit-slider-runnable-track{
+  height: var(--track-h);
+  border-radius: 999px;
+  background: transparent; /* backgroundni inputning o'zida berdik */
 }
 
-.filter-box input {
-  width: 350px;
+/* Chrome/Safari thumb */
+.filter-box input[type="range"]::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  appearance: none;
+  width: var(--thumb);
+  height: var(--thumb);
+  border-radius: 50%;
+  background: var(--fill);
+  border: 3px solid #fff;                 /* rasmga o'xshash ring */
+  box-shadow: 0 6px 16px rgba(0,0,0,.18); /* yumshoq soya */
+  margin-top: calc((var(--track-h) - var(--thumb)) / 2);
+
 }
+
+/* Firefox track */
+.filter-box input[type="range"]::-moz-range-track{
+  height: var(--track-h);
+  border-radius: 999px;
+  background: var(--track);
+}
+
+/* Firefox fill */
+.filter-box input[type="range"]::-moz-range-progress{
+  height: var(--track-h);
+  border-radius: 999px;
+  background: var(--fill);
+}
+
+/* Firefox thumb */
+.filter-box input[type="range"]::-moz-range-thumb{
+  width: var(--thumb);
+  height: var(--thumb);
+  border-radius: 50%;
+  background: var(--fill);
+  border: 3px solid #fff;
+  box-shadow: 0 6px 16px rgba(0,0,0,.18);
+}
+
+/* Focus ring */
+.filter-box input[type="range"]:focus-visible{
+  outline: 3px solid rgba(17,24,39,.15);
+  outline-offset: 8px;
+}
+
 
 /* price */
 .price-range {
@@ -647,10 +729,16 @@ img {
   /* chap blok (filter + results) to'liq kenglik */
   .salom {
     width: 100%;
+    top: 20px;
+    align-self: flex-start;
+    height: fit-content;
   }
 
   .shop-filter {
     width: 100%;
+    top: 20px; /* tepadan masofa, 20/60/80px qilib ko‘ring */
+    align-self: flex-start;
+    height: fit-content;
   }
 
   /* results matni pastga tushib ketmasin */
@@ -815,38 +903,52 @@ img {
   }
 }
 
-
 .footer-col h4 {
-    font-size: 12px;
-    margin-bottom: 10px;
-    line-height: 1.2;
-  }
+  font-size: 12px;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
 
-  /* umumiy footer matnlar */
-  .footer-col,
-  .footer-col p,
-  .footer-col li,
-  .footer-col a {
-    font-size: 10px;
-    line-height: 1.25;
-  }
+.footer-col,
+.footer-col p,
+.footer-col li,
+.footer-col a {
+  font-size: 10px;
+  line-height: 1.25;
+}
 
-  /* UL ichidagi linklar 2 ustun bo'lsin */
-  .footer-col ul {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 1 qatorda 2 ta */
-    gap: 6px 10px; /* qator/ustun oralig'i */
-  }
+.footer-col ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6px 10px;
+}
 
-  /* har bir item va linklar sig'sin, 2 qator bo'lib tushsin */
-  .footer-col ul li {
-    margin-bottom: 0; /* grid gap ishlaydi */
-    min-width: 0;
-  }
+.footer-col ul li {
+  margin-bottom: 0;
+  min-width: 0;
+}
 
-  .footer-col ul li a {
-    display: block;
-    white-space: normal;        /* 1 qatorda majburlamasin */
-    overflow-wrap: anywhere;    /* uzun so'zlarni bo'lsin */
-    word-break: break-word;
-  }
+.footer-col ul li a {
+  display: block;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.shop-layout {
+  align-items: flex-start;
+}
+
+.salom {
+  position: sticky;
+  top: 20px;
+  align-self: flex-start;
+}
+
+.results {
+  position: sticky;
+  margin-top: 0;
+  background: #fff;
+  padding: 12px 25px;
+  border-top: 1px solid #e5e7eb;
+}

@@ -9,6 +9,23 @@ body {
   background-color: #eef0fb;
 }
 
+/* ===== STICKY HEADER (TOP-BAR + NAVBAR) ===== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 99999;
+}
+
+/* layerlar tartibi */
+.site-header .top-bar {
+  position: relative;
+  z-index: 2;
+}
+.site-header .qqqqq {
+  position: relative;
+  z-index: 1;
+}
+
 /* TOP BAR */
 .top-text {
   max-width: 1200px;
@@ -40,10 +57,10 @@ body {
 }
 
 .habar {
-  position: fixed; /* absolute emas */
-  top: 5%;
+  position: fixed;
+  top: 20%;
   left: 40%;
-  z-index: 99999;
+  z-index: 9999;
   background: #28a745;
   color: #fff;
   padding: 14px 18px;
@@ -879,13 +896,18 @@ animation */
   gap: 40px;
 }
 
-/* item */
+/* item (UPDATED) */
 .faq-item {
+  padding-bottom: 14px;
+  border-bottom: 1px solid #6b7280;
+  cursor: pointer;
+}
+
+/* header row */
+.faq-header {
   display: flex;
   align-items: center;
   gap: 18px;
-  padding-bottom: 14px;
-  border-bottom: 1px solid #6b7280;
 }
 
 /* number */
@@ -901,6 +923,36 @@ animation */
   font-size: 16px;
   font-weight: 500;
   color: #111827;
+  margin: 0; /* p default marginni olib tashlaymiz */
+  flex: 1; /* toggle o‘ngga chiqishi uchun */
+}
+
+/* + icon */
+.faq-toggle {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* answer (hidden by default) */
+.faq-answer {
+  overflow: hidden;
+  max-height: 0;
+  color: #374151;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-left: 50px; /* num+gap align: javob savol ostidan chiqsin */
+  margin-top: 0;
+}
+
+/* when open */
+.faq-item.active .faq-answer {
+  max-height: 300px; /* javob uzunroq bo‘lsa katta qiling */
+  margin-top: 10px;
+}
+
+.faq-item.active .faq-toggle {
+  transform: rotate(45deg); /* + -> x ko‘rinishi */
 }
 
 /* FOOTER */
@@ -1413,38 +1465,37 @@ img {
   }
 }
 
-
 .footer-col h4 {
-    font-size: 12px;
-    margin-bottom: 10px;
-    line-height: 1.2;
-  }
+  font-size: 12px;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
 
-  /* umumiy footer matnlar */
-  .footer-col,
-  .footer-col p,
-  .footer-col li,
-  .footer-col a {
-    font-size: 10px;
-    line-height: 1.25;
-  }
+/* umumiy footer matnlar */
+.footer-col,
+.footer-col p,
+.footer-col li,
+.footer-col a {
+  font-size: 10px;
+  line-height: 1.25;
+}
 
-  /* UL ichidagi linklar 2 ustun bo'lsin */
-  .footer-col ul {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 1 qatorda 2 ta */
-    gap: 6px 10px; /* qator/ustun oralig'i */
-  }
+/* UL ichidagi linklar 2 ustun bo'lsin */
+.footer-col ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 1 qatorda 2 ta */
+  gap: 6px 10px; /* qator/ustun oralig'i */
+}
 
-  /* har bir item va linklar sig'sin, 2 qator bo'lib tushsin */
-  .footer-col ul li {
-    margin-bottom: 0; /* grid gap ishlaydi */
-    min-width: 0;
-  }
+/* har bir item va linklar sig'sin, 2 qator bo'lib tushsin */
+.footer-col ul li {
+  margin-bottom: 0; /* grid gap ishlaydi */
+  min-width: 0;
+}
 
-  .footer-col ul li a {
-    display: block;
-    white-space: normal;        /* 1 qatorda majburlamasin */
-    overflow-wrap: anywhere;    /* uzun so'zlarni bo'lsin */
-    word-break: break-word;
-  }
+.footer-col ul li a {
+  display: block;
+  white-space: normal; /* 1 qatorda majburlamasin */
+  overflow-wrap: anywhere; /* uzun so'zlarni bo'lsin */
+  word-break: break-word;
+}

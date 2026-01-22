@@ -9,6 +9,23 @@ body {
   background-color: #eef0fb;
 }
 
+/* ===== STICKY HEADER (TOP-BAR + NAVBAR) ===== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 99999;
+}
+
+/* layerlar tartibi */
+.site-header .top-bar {
+  position: relative;
+  z-index: 2;
+}
+.site-header .qqqq {
+  position: relative;
+  z-index: 1;
+}
+
 /* TOP BAR */
 .top-text {
   max-width: 1200px;
@@ -772,38 +789,37 @@ img {
   }
 }
 
-
 .footer-col h4 {
-    font-size: 12px;
-    margin-bottom: 10px;
-    line-height: 1.2;
-  }
+  font-size: 12px;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
 
-  /* umumiy footer matnlar */
-  .footer-col,
-  .footer-col p,
-  .footer-col li,
-  .footer-col a {
-    font-size: 10px;
-    line-height: 1.25;
-  }
+/* umumiy footer matnlar */
+.footer-col,
+.footer-col p,
+.footer-col li,
+.footer-col a {
+  font-size: 10px;
+  line-height: 1.25;
+}
 
-  /* UL ichidagi linklar 2 ustun bo'lsin */
-  .footer-col ul {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 1 qatorda 2 ta */
-    gap: 6px 10px; /* qator/ustun oralig'i */
-  }
+/* UL ichidagi linklar 2 ustun bo'lsin */
+.footer-col ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 1 qatorda 2 ta */
+  gap: 6px 10px; /* qator/ustun oralig'i */
+}
 
-  /* har bir item va linklar sig'sin, 2 qator bo'lib tushsin */
-  .footer-col ul li {
-    margin-bottom: 0; /* grid gap ishlaydi */
-    min-width: 0;
-  }
+/* har bir item va linklar sig'sin, 2 qator bo'lib tushsin */
+.footer-col ul li {
+  margin-bottom: 0; /* grid gap ishlaydi */
+  min-width: 0;
+}
 
-  .footer-col ul li a {
-    display: block;
-    white-space: normal;        /* 1 qatorda majburlamasin */
-    overflow-wrap: anywhere;    /* uzun so'zlarni bo'lsin */
-    word-break: break-word;
-  }
+.footer-col ul li a {
+  display: block;
+  white-space: normal; /* 1 qatorda majburlamasin */
+  overflow-wrap: anywhere; /* uzun so'zlarni bo'lsin */
+  word-break: break-word;
+}

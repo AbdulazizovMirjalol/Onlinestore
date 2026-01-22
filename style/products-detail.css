@@ -9,6 +9,23 @@ body {
   color: #111;
 }
 
+/* ===== STICKY HEADER (TOP-BAR + NAVBAR) ===== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 99999;
+}
+
+/* layerlar tartibi */
+.site-header .top-bar {
+  position: relative;
+  z-index: 2;
+}
+.site-header .qqqq {
+  position: relative;
+  z-index: 1;
+}
+
 /* TOP BAR */
 .top-text {
   max-width: 1200px;
@@ -536,5 +553,3 @@ img {
     width: 180px;
   }
 }
-
-
